@@ -232,6 +232,71 @@
           </div>
         </fieldset>
 
+        <fieldset>
+          <legend>Ek Bilgiler</legend>
+
+          <div class="form-group">
+            <label for="cv">CV Yükle (PDF veya Word):</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" />
+          </div>
+
+          <div class="form-group">
+            <label for="gano"
+              >Not Ortalaması (GANO): <span id="ganoDeger">2.00</span></label
+            >
+            <input
+              type="range"
+              id="gano"
+              name="gano"
+              min="0"
+              max="4"
+              step="0.01"
+              value="2.00"
+              style="cursor: pointer"
+              oninput="
+                document.getElementById('ganoDeger').innerText = this.value
+              "
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tema">Yaka Kartı Renk Tercihi:</label>
+            <input
+              type="color"
+              id="tema"
+              name="tema"
+              value="#0056b3"
+              style="
+                height: 40px;
+                width: 60px;
+                padding: 2px;
+                display: inline-block;
+                vertical-align: middle;
+              "
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="saat">Görüşme İçin Uygun Saat Dilimi:</label>
+            <input type="time" id="saat" name="saat" />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="checkbox"
+              id="kvkk"
+              name="kvkk"
+              required
+              style="width: auto"
+            />
+            <label for="kvkk" style="display: inline"
+              >KVKK Metnini Okudum ve Onaylıyorum.</label
+            >
+          </div>
+        </fieldset>
+
+        <button type="submit">Başvuruyu Tamamla</button>
+
         <footer>
           <p>
             <strong>Gizlilik / KVKK:</strong> Başvurunuz kapsamındaki veriler
